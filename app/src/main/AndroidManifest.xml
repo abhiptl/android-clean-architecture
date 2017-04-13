@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ams.com.eattendance">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+            android:name=".AMSApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version"/>
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key"/>
+
+        <activity android:name=".presentation.ui.activities.MainActivity">
+        </activity>
+        <activity
+                android:name=".presentation.ui.activities.WelcomeActivity"
+                android:label="@string/activity_welcome_title"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".presentation.ui.activities.registration.RegistrationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".presentation.ui.activities.registration.OldPhoneNumberActivity"
+                android:label="@string/activity_old_phone_number_title"
+                android:parentActivityName=".presentation.ui.activities.registration.RegistrationActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".presentation.ui.activities.registration.RegistrationActivity"/>
+        </activity>
+        <activity
+                android:name=".presentation.ui.activities.registration.AttendanceConfigurationActivity"
+                android:label="@string/activity_attendance_configuration_title"
+                android:parentActivityName=".presentation.ui.activities.registration.OldPhoneNumberActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".presentation.ui.activities.registration.OldPhoneNumberActivity"/>
+        </activity>
+        <activity
+                android:name=".presentation.ui.activities.geolocation.MyGeoLocationActivity"
+                android:label="@string/activity_my_geolocation_title"
+                android:parentActivityName=".presentation.ui.activities.WelcomeActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ams.com.eattendance.presentation.ui.activities.WelcomeActivity"/>
+        </activity>
+        <activity
+                android:name=".presentation.ui.activities.wifi.WifiConnectionActivity"
+                android:label="@string/activity_wifi_connection_title"
+                android:parentActivityName=".presentation.ui.activities.WelcomeActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ams.com.eattendance.presentation.ui.activities.WelcomeActivity"/>
+        </activity>
+        <activity
+                android:name=".presentation.ui.activities.bluetooth.BluetoothConnectionActivity"
+                android:label="@string/activity_bluetooth_connection_title"
+                android:parentActivityName=".presentation.ui.activities.WelcomeActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ams.com.eattendance.presentation.ui.activities.WelcomeActivity"/>
+        </activity>
+
+        <service
+                android:name=".presentation.services.LocationService"
+                android:exported="false">
+        </service>
+        <service
+                android:name=".presentation.services.LoopingServiceSnipped"
+                android:exported="false"
+                android:process=":MyLocationService">
+        </service>
+
+        <receiver
+                android:name=".presentation.receivers.LocationAlarmReceiver"
+                android:enabled="true"
+                android:exported="false">
+        </receiver>
+        <receiver
+                android:name=".presentation.receivers.PhoneBootCompleteReceiver"
+                android:enabled="true"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+                android:name=".presentation.services.InOutDetectionService"
+                android:enabled="true"
+                android:exported="false" android:process=":InOutDetectionService">
+        </service>
+    </application>
+
+</manifest>

@@ -1,2 +1,3 @@
-# android-clean-architecture
-Android boiler plate code with clean architecture
+# eAttendance #
+
+This repository is for android mobile application of Attendance software.

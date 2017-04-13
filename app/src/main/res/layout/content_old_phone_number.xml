@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/content_old_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_old_phone_number"
+        tools:context=".presentation.ui.activities.registration.OldPhoneNumberActivity">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="@string/activity_old_mobile_already_registered"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+                      android:layout_marginTop="@dimen/activity_vertical_margin">
+            <com.hbb20.CountryCodePicker
+                    android:id="@+id/input_old_country_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content">
+                <EditText android:id="@+id/edittext_old_mobile_number" android:maxLength="@string/activity_registration_max_mobile_length"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="@string/activity_old_mobile_hint" android:inputType="number">
+                </EditText>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatButton android:id="@+id/button_old_mobile_next" android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:text="@string/button_text_next" android:theme="@style/myColoredButton"/>
+
+
+        <TextView android:layout_width="match_parent" android:gravity="center" android:layout_height="match_parent"
+                  android:text="@string/activity_registration_or" android:textStyle="bold" android:textSize="20dp"
+                  android:textColor="@color/colorGreyShade"/>
+
+        <android.support.v7.widget.AppCompatButton android:id="@+id/button_old_new_register" android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:text="@string/button_text_new_registration"
+                                                   android:theme="@style/myColoredButton"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

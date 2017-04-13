@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginTop="30dp">
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/content_attendance_configuration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:showIn="@layout/activity_attendance_configuration"
+            tools:context=".presentation.ui.activities.registration.AttendanceConfigurationActivity">
+
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           android:layout_marginTop="@dimen/activity_vertical_margin">
+                <EditText android:id="@+id/edittext_employee_first_name" android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="@string/activity_attendance_configuration_employee_first_name">
+                </EditText>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           android:layout_marginTop="@dimen/activity_vertical_margin">
+                <EditText android:id="@+id/edittext_employee_last_name" android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="@string/activity_attendance_configuration_employee_last_name">
+                </EditText>
+            </android.support.design.widget.TextInputLayout>
+
+            <Spinner
+                    android:id="@+id/spinner_location" android:backgroundTint="@color/colorAccent"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent" android:spinnerMode="dropdown"
+                    android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:prompt="@string/activity_attendance_configuration_employee_select_location"/>
+
+            <Spinner
+                    android:id="@+id/spinner_department" android:backgroundTint="@color/colorAccent"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent" android:spinnerMode="dropdown"
+                    android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:prompt="@string/activity_attendance_configuration_employee_select_department"/>
+
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:paddingTop="@dimen/activity_vertical_margin"
+                      android:text="@string/activity_attendance_configuration_select_timing" android:textSize="20dp"
+                      android:textStyle="bold" android:textColor="@color/colorPrimary"/>
+
+            <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:columnCount="4"
+                        android:rowCount="8" android:orientation="vertical">
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="@string/activity_attendance_configuration_day"
+                          android:layout_row="0" android:textStyle="bold"
+                          android:layout_column="0" android:padding="10dp"/>
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content" android:textStyle="bold"
+                          android:text="@string/activity_attendance_configuration_working" android:layout_row="0"
+                          android:layout_column="1" android:padding="10dp" android:layout_gravity="center"/>
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content" android:textStyle="bold"
+                          android:text="@string/activity_attendance_configuration_start_time"
+                          android:layout_row="0" android:layout_gravity="left"
+                          android:layout_column="2" android:padding="10dp"/>
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content" android:textStyle="bold"
+                          android:text="@string/activity_attendance_configuration_hours" android:layout_row="0"
+                          android:layout_column="3" android:padding="10dp"/>
+
+
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="@string/activity_attendance_configuration_mon"
+                          android:layout_row="1"
+                          android:layout_column="0" android:padding="10dp"></TextView>
+                <Spinner android:id="@+id/spinner_working_mon" android:backgroundTint="@color/colorAccent"
+                         style="@style/Base.Widget.AppCompat.Spinner.Underlined" android:layout_row="1"
+                         android:layout_column="1"
+                         android:layout_width="wrap_content" android:spinnerMode="dropdown"
+                         android:layout_height="wrap_content" android:padding="10dp"/>
+                <EditText android:id="@+id/edittext_mon_starttime" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="1" android:layout_gravity="center"
+                          android:layout_column="2" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+                <EditText android:id="@+id/edittext_mon_hours" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="1"
+                          android:layout_column="3" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="@string/activity_attendance_configuration_tue" android:layout_row="2"
+                          android:layout_column="0" android:padding="10dp"></TextView>
+                <Spinner android:id="@+id/spinner_working_tue" android:backgroundTint="@color/colorAccent"
+                         style="@style/Base.Widget.AppCompat.Spinner.Underlined" android:layout_row="2"
+                         android:layout_column="1"
+                         android:layout_width="wrap_content" android:spinnerMode="dropdown"
+                         android:layout_height="wrap_content" android:padding="10dp"/>
+                <EditText android:id="@+id/edittext_tue_starttime" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="2" android:layout_gravity="center"
+                          android:layout_column="2" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+                <EditText android:id="@+id/edittext_tue_hours" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="2"
+                          android:layout_column="3" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="@string/activity_attendance_configuration_wed" android:layout_row="3"
+                          android:layout_column="0" android:padding="10dp"></TextView>
+                <Spinner android:id="@+id/spinner_working_wed" android:backgroundTint="@color/colorAccent"
+                         style="@style/Base.Widget.AppCompat.Spinner.Underlined" android:layout_row="3"
+                         android:layout_column="1"
+                         android:layout_width="wrap_content" android:spinnerMode="dropdown"
+                         android:layout_height="wrap_content" android:padding="10dp"/>
+                <EditText android:id="@+id/edittext_wed_starttime" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="3" android:layout_gravity="center"
+                          android:layout_column="2" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+                <EditText android:id="@+id/edittext_wed_hours" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="3"
+                          android:layout_column="3" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="@string/activity_attendance_configuration_thu" android:layout_row="4"
+                          android:layout_column="0" android:padding="10dp"></TextView>
+                <Spinner android:id="@+id/spinner_working_thu" android:backgroundTint="@color/colorAccent"
+                         style="@style/Base.Widget.AppCompat.Spinner.Underlined" android:layout_row="4"
+                         android:layout_column="1"
+                         android:layout_width="wrap_content" android:spinnerMode="dropdown"
+                         android:layout_height="wrap_content" android:padding="10dp"/>
+                <EditText android:id="@+id/edittext_thu_starttime" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="4" android:layout_gravity="center"
+                          android:layout_column="2" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+                <EditText android:id="@+id/edittext_thu_hours" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="4"
+                          android:layout_column="3" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="@string/activity_attendance_configuration_fri" android:layout_row="5"
+                          android:layout_column="0" android:padding="10dp"></TextView>
+                <Spinner android:id="@+id/spinner_working_fri" android:backgroundTint="@color/colorAccent"
+                         style="@style/Base.Widget.AppCompat.Spinner.Underlined" android:layout_row="5"
+                         android:layout_column="1"
+                         android:layout_width="wrap_content" android:spinnerMode="dropdown"
+                         android:layout_height="wrap_content" android:padding="10dp"/>
+                <EditText android:id="@+id/edittext_fri_starttime" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="5" android:layout_gravity="center"
+                          android:layout_column="2" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+                <EditText android:id="@+id/edittext_fri_hours" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="5"
+                          android:layout_column="3" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="@string/activity_attendance_configuration_sat" android:layout_row="6"
+                          android:layout_column="0" android:padding="10dp"></TextView>
+                <Spinner android:id="@+id/spinner_working_sat" android:backgroundTint="@color/colorAccent"
+                         style="@style/Base.Widget.AppCompat.Spinner.Underlined" android:layout_row="6"
+                         android:layout_column="1"
+                         android:layout_width="wrap_content" android:spinnerMode="dropdown"
+                         android:layout_height="wrap_content" android:padding="10dp"/>
+                <EditText android:id="@+id/edittext_sat_starttime" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="6" android:layout_gravity="center"
+                          android:layout_column="2" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+                <EditText android:id="@+id/edittext_sat_hours" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="6"
+                          android:layout_column="3" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+
+                <TextView android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="@string/activity_attendance_configuration_sun" android:layout_row="7"
+                          android:layout_column="0" android:padding="10dp"></TextView>
+                <Spinner android:id="@+id/spinner_working_sun" android:backgroundTint="@color/colorAccent"
+                         style="@style/Base.Widget.AppCompat.Spinner.Underlined" android:layout_row="7"
+                         android:layout_column="1"
+                         android:layout_width="wrap_content" android:spinnerMode="dropdown"
+                         android:layout_height="wrap_content" android:padding="10dp"/>
+                <EditText android:id="@+id/edittext_sun_starttime" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="7" android:layout_gravity="center"
+                          android:layout_column="2" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+                <EditText android:id="@+id/edittext_sun_hours" android:layout_height="match_parent" android:layout_width="wrap_content"
+                          android:text="    :    " android:layout_row="7"
+                          android:layout_column="3" android:padding="10dp" android:editable="false" android:gravity="right"
+                ></EditText>
+
+            </GridLayout>
+
+            <android.support.v7.widget.AppCompatButton android:id="@+id/button_finish" android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:paddingTop="@dimen/activity_vertical_margin"
+                                                       android:text="@string/button_text_finish" android:theme="@style/myColoredButton"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

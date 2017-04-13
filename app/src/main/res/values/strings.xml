@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Attendance System</string>
+    <string name="activity_welcome_title">Attendance</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_notifications">Notifications</string>
+
+    <string name="menu_title_dashboard">Dashboard</string>
+    <string name="menu_title_attendance">Attendance</string>
+    <string name="menu_title_setting">Setting</string>
+    <string name="menu_title_profile">Profile</string>
+
+    <string name="menu_title_detection">Detection Methods</string>
+    <string name="menu_title_geolocation">Geo location</string>
+    <string name="menu_title_bluetooth">Bluetooth</string>
+    <string name="menu_title_wifi">Wi-Fi MacID</string>
+
+    <string name="fragment_dashboard">Hello Dashboard fragment</string>
+
+    <string name="button_text_next">NEXT</string>
+    <string name="button_text_register_company">REGISTER COMPANY</string>
+    <string name="button_text_got_it">GOT IT</string>
+    <string name="button_text_finish">FINISH</string>
+
+    <string name="activity_registration_title">Attendance</string>
+    <string name="activity_registration_hint_company_name">Your Company Name</string>
+    <string name="activity_registration_hint_mobile_number">Your Mobile Number</string>
+    <string name="activity_registration_agree_to">I agree to</string>
+    <string name="activity_registration_term_condition">
+        <u>Terms and Condition</u>
+    </string>
+    <string name="activity_registration_or">OR</string>
+    <string name="activity_registration_you_can_register">You can register your company at</string>
+    <string name="activity_registration_ams_site">
+        <u>http://www.ams.org</u>
+    </string>
+    <string name="activity_registration_max_mobile_length">10</string>
+    <string name="activity_registration_max_company_length">30</string>
+
+    <string name="dialogue_termscondition_title">Terms and Condition</string>
+    <string name="dialogue_termscondition_content">COPYRIGHTS:
+
+        \nCopyright 2013 APP_NAME. All Rights Reserved.
+
+        \n\nThis software may not, in whole or in any part, be copied, reproduced, transmitted, translated (into any
+        language, natural or computer), stored in a retrieval system, reduced to any electronic medium or machine readable
+        format, or by any other form or means without prior consent, in writing, from APP_NAME.
+
+        \n\nYou are granted a limited license to use this software. The software may be used or copied only in accordance
+        with the terms of that license, which is described in the following paragraphs.
+
+        \n\nTRADEMARKS:
+        \n\n[Software logos, icons, etc that are Trademarked]
+
+        \n\nLICENSE:
+        \n\n\"THE SOFTWARE\" shall be taken to mean the software contained in this app and any subsequent versions
+        or upgrades received as a result of having purchased this app. \"BUYER\" shall be taken as the original
+        purchaser of the software.
+
+        \n\nBuyer has the non-exclusive right to the use of software only on a single device. Buyer may not electronically
+        transfer the program from one device to another over any type of network. Buyer may not distribute copies
+        of the software or the accompanying documentation to others either for a fee or without charge. Buyer may not modify
+        or translate the program or documentation. User may not disassemble the program or allow it to be disassembled
+        into its constituent source code. Buyer\'s use of the software indicates his/her acceptance of these terms
+        and conditions. If buyer does not agree to these conditions, return the distribution media, documentation, and
+        associated materials to the vendor from whom the software was purchased, and/or uninstall the software from the device,
+        and erase the software from any and all storage devices upon which it may have been installed.
+
+        \n\nThis license agreement shall be governed by the laws of The United States of America, Massachusetts and
+        shall inure to the benefit of APP_NAME or its assigns.
+
+        \n\nDISCLAIMER / LIMITATION OF LIABILITY:
+        \n\nBuyer acknowledges that the software may not be free from defects and may not satisfy all of buyer\'s
+        needs. APP_NAME warrants all media on which the software is distributed for 60 days to be free from defects
+        in normal use. The software and any accompanying written materials are licensed \"AS IS\". Buyer\'s exclusive
+        remedy during the warranty period (if any) shall consist of replacement of distribution media if determined to be
+        faulty. In no event will APP_NAME be liable for direct, indirect, incidental or consequential damage or
+        damages resulting from loss of use, or loss of anticipated profits resulting from any defect in the software,
+        even if it has been advised of the possibility of such damage. Some laws do not allow exclusion or limitation
+        of implied warranties or liabilities for incidental or consequential damages, so the above limitations or
+        exclusion may not apply.
+
+        \n\nSPECIFIC RESTRICTIONS:
+        \n\nIn accordance with the COMPUTER SOFTWARE RENTAL ACT OF 1990, this software may not be rented, lent or leased.
+        \n\nThe software and accompanying documentation may not be provided by a \"Backup Service\" or any other vendor
+        which does not provide an original package as composed of APP_NAME, including but not limited to all original
+        distribution media, documentation, registration cards, and insertions.
+    </string>
+    <string name="activity_old_phone_number_title">Attendance</string>
+
+    <string name="activity_old_mobile_hint">Old Mobile Number</string>
+    <string name="button_text_new_registration">New Registration</string>
+    <string name="activity_old_mobile_already_registered">If you have registered already before please enter your previous/correct
+        mobile number
+    </string>
+    <string name="activity_attendance_configuration_title">Attendance</string>
+
+    <string name="activity_attendance_configuration_employee_first_name">Your First Name</string>
+    <string name="activity_attendance_configuration_employee_last_name">Your Last Name</string>
+    <string name="activity_attendance_configuration_employee_select_location">Select Location</string>
+    <string name="activity_attendance_configuration_employee_select_department">Select Department</string>
+    <string name="activity_attendance_configuration_select_timing">Select Office Timing</string>
+    <string name="activity_attendance_configuration_select_working">Working Days</string>
+    <string name="activity_attendance_configuration_day">Days</string>
+    <string name="activity_attendance_configuration_working">Working</string>
+    <string name="activity_attendance_configuration_start_time">Start Time</string>
+    <string name="activity_attendance_configuration_hours">Hours</string>
+
+    <string name="activity_attendance_configuration_mon">Mon</string>
+    <string name="activity_attendance_configuration_tue">Tue</string>
+    <string name="activity_attendance_configuration_wed">Wed</string>
+    <string name="activity_attendance_configuration_thu">Thu</string>
+    <string name="activity_attendance_configuration_fri">Fri</string>
+    <string name="activity_attendance_configuration_sat">Sat</string>
+    <string name="activity_attendance_configuration_sun">Sun</string>
+
+
+    <string name="activity_my_geolocation_title">My Geo Location</string>
+    <string name="google_maps_key">AIzaSyAn98KXovxOqKnsGcHZtj9KKTWVazzj0pg</string>
+    <string name="activity_wifi_connection_title">WiFi Mac ID</string>
+    <string name="activity_wifi_connection_connected_status">Connected</string>
+    <string name="activity_bluetooth_connection_title">Bluetooth</string>
+
+</resources>
