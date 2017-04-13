@@ -1,3 +1,2 @@
-# eAttendance #
+# Android clean architecture #
 
-This repository is for android mobile application of Attendance software.
