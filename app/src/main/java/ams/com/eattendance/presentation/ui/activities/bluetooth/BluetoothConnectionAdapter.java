@@ -11,9 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * Created by WeConnect on 4/4/2017.
- */
 public class BluetoothConnectionAdapter extends RecyclerView.Adapter<BluetoothConnectionAdapter.BluetoothViewHolder> {
 
 	private Context context;

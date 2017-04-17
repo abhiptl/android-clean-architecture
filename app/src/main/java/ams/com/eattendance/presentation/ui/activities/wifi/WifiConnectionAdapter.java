@@ -10,9 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * Created by WeConnect on 4/3/2017.
- */
 public class WifiConnectionAdapter extends RecyclerView.Adapter<WifiConnectionAdapter.WifiViewHolder> {
 
 	private Context context;

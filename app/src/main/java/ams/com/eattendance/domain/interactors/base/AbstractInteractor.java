@@ -4,7 +4,6 @@ import ams.com.eattendance.domain.executor.Executor;
 import ams.com.eattendance.domain.executor.MainThread;
 
 /**
- * Created by WeConnect on 10/4/17.
  * <p/>
  * This abstract class implements some common methods for all interactors. Cancelling an interactor, check if its running
  * and finishing an interactor has mostly the same code throughout so that is why this class was created. Field methods

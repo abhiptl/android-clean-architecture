@@ -85,10 +85,9 @@ public class MyGeoLocationActivity extends AppCompatActivity implements OnMapRea
 		mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
 		mapFragment.getMapAsync(this);
 
-		daoSession = ((AMSApplication)this.getApplication()).getDaoSession();
-		geoFencingPresenter =
-				new GeoFencingPresenterImpl(ThreadExecutor.getInstance(), MainThreadImpl.getInstance(), this, new DatabaseRepositoryImpl
-						(daoSession));
+		daoSession = ((AMSApplication) this.getApplication()).getDaoSession();
+		geoFencingPresenter = new GeoFencingPresenterImpl(ThreadExecutor.getInstance(), MainThreadImpl.getInstance(), this,
+				new DatabaseRepositoryImpl(daoSession));
 
 	}
 

@@ -9,9 +9,6 @@ import ams.com.eattendance.domain.repository.DatabaseRepository;
 import ams.com.eattendance.presentation.presenters.GeoFencingPresenter;
 import ams.com.eattendance.presentation.presenters.base.AbstractPresenter;
 
-/**
- * Created by WeConnect on 4/10/2017.
- */
 public class GeoFencingPresenterImpl extends AbstractPresenter implements GeoFencingPresenter, GetGeoFencingInteractor.Callback {
 
 	private GeoFencingPresenter.View view;
@@ -29,7 +26,6 @@ public class GeoFencingPresenterImpl extends AbstractPresenter implements GeoFen
 		GetGeoFencingInteractor getGeoFencingInteractor =
 				new GetGeoFencingInteractorImpl(executor, mainThread, employeeId, databaseRepository, this);
 		getGeoFencingInteractor.execute();
-
 
 	}
 

@@ -8,16 +8,13 @@ import ams.com.eattendance.domain.repository.WebServiceRepository;
 import ams.com.eattendance.presentation.presenters.ValidateLoginPresenter;
 import ams.com.eattendance.presentation.presenters.base.AbstractPresenter;
 
-/**
- * Created by WeConnect on 4/13/2017.
- */
 public class ValidateLoginPresenterImpl extends AbstractPresenter implements ValidateLoginPresenter, ValidateLoginInteractor.Callback {
 
 	private ValidateLoginPresenter.View view;
 	private WebServiceRepository webServiceRepository;
 
-	public ValidateLoginPresenterImpl(Executor executor, MainThread mainThread,ValidateLoginPresenter.View view, WebServiceRepository
-			webServiceRepository) {
+	public ValidateLoginPresenterImpl(Executor executor, MainThread mainThread, ValidateLoginPresenter.View view,
+			WebServiceRepository webServiceRepository) {
 		super(executor, mainThread);
 		this.view = view;
 		this.webServiceRepository = webServiceRepository;
@@ -63,11 +60,10 @@ public class ValidateLoginPresenterImpl extends AbstractPresenter implements Val
 		view.onMobileNumberNotFound();
 	}
 
-
 	@Override
 	public void validateLogin(String companyName, String phoneNumber) {
-		ValidateLoginInteractor validateLoginInteractor = new ValidateLoginInteractorImpl(executor, mainThread, companyName, phoneNumber,
-				webServiceRepository, this);
+		ValidateLoginInteractor validateLoginInteractor =
+				new ValidateLoginInteractorImpl(executor, mainThread, companyName, phoneNumber, webServiceRepository, this);
 		validateLoginInteractor.execute();
 	}
 }

@@ -1,13 +1,10 @@
 package ams.com.eattendance.data.database.model;
 
 import org.greenrobot.greendao.annotation.Entity;
+import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Property;
-import org.greenrobot.greendao.annotation.Generated;
 
-/**
- * Created by WeConnect on 4/12/2017.
- */
 @Entity(nameInDb = KeyValueConfig.TABLE_NAME)
 public class KeyValueConfig {
 
@@ -30,8 +27,7 @@ public class KeyValueConfig {
 	private String configValue;
 
 	@Generated(hash = 1816822071)
-	public KeyValueConfig(Long id, String configGroup, String configKey,
-			String configValue) {
+	public KeyValueConfig(Long id, String configGroup, String configKey, String configValue) {
 		this.id = id;
 		this.configGroup = configGroup;
 		this.configKey = configKey;
@@ -73,6 +69,5 @@ public class KeyValueConfig {
 	public void setConfigValue(String configValue) {
 		this.configValue = configValue;
 	}
-
 
 }

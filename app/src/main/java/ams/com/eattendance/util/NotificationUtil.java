@@ -11,9 +11,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.NotificationCompat;
 
-/**
- * Created by Abhishek on 3/9/2017.
- */
 public class NotificationUtil {
 
 	private static final String TAG = NotificationUtil.class.getSimpleName();

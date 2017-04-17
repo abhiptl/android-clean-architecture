@@ -12,9 +12,6 @@ import ams.com.eattendance.data.database.model.KeyValueConfigDao;
 import ams.com.eattendance.domain.model.Geofence;
 import ams.com.eattendance.domain.repository.DatabaseRepository;
 
-/**
- * Created by WeConnect on 4/10/2017.
- */
 public class DatabaseRepositoryImpl implements DatabaseRepository {
 
 	private DaoSession daoSession;
@@ -39,26 +36,26 @@ public class DatabaseRepositoryImpl implements DatabaseRepository {
 		Double latitude = null;
 		Double longitude = null;
 		Double radius = null;
-		for(KeyValueConfig keyValueConfig : list) {
-			if(keyValueConfig.getConfigKey().equals(ConfigKeyEnum.LOCATION_NAME.name())) {
+		for (KeyValueConfig keyValueConfig : list) {
+			if (keyValueConfig.getConfigKey().equals(ConfigKeyEnum.LOCATION_NAME.name())) {
 				locationName = keyValueConfig.getConfigValue();
 			}
 
-			if(keyValueConfig.getConfigKey().equals(ConfigKeyEnum.LATITUDE.name())) {
+			if (keyValueConfig.getConfigKey().equals(ConfigKeyEnum.LATITUDE.name())) {
 				latitude = Double.valueOf(keyValueConfig.getConfigValue());
 			}
 
-			if(keyValueConfig.getConfigKey().equals(ConfigKeyEnum.LONGITUDE.name())) {
+			if (keyValueConfig.getConfigKey().equals(ConfigKeyEnum.LONGITUDE.name())) {
 				longitude = Double.valueOf(keyValueConfig.getConfigValue());
 			}
 
-			if(keyValueConfig.getConfigKey().equals(ConfigKeyEnum.RADIUS.name())) {
+			if (keyValueConfig.getConfigKey().equals(ConfigKeyEnum.RADIUS.name())) {
 				radius = Double.valueOf(keyValueConfig.getConfigValue());
 			}
 		}
 
-		if(locationName != null && latitude != null && longitude != null && radius != null) {
-			geofence = new Geofence(locationName,latitude, longitude, radius);
+		if (locationName != null && latitude != null && longitude != null && radius != null) {
+			geofence = new Geofence(locationName, latitude, longitude, radius);
 		}
 
 		return geofence;

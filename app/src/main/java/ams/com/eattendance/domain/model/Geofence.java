@@ -1,8 +1,5 @@
 package ams.com.eattendance.domain.model;
 
-/**
- * Created by WeConnect on 4/10/2017.
- */
 public class Geofence {
 
 	private String geoLocationName;

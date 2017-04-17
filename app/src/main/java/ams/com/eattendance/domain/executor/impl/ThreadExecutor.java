@@ -10,7 +10,6 @@ import ams.com.eattendance.domain.interactors.base.AbstractInteractor;
 
 /**
  * This singleton class will make sure that each interactor operation gets a background thread.
- *
  */
 public class ThreadExecutor implements Executor {
 

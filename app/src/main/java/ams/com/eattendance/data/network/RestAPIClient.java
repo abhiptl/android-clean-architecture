@@ -6,7 +6,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * <p/>
  * This is the main entry point for network communication. Use this class for instancing REST services which do the
  * actual communication.
  */

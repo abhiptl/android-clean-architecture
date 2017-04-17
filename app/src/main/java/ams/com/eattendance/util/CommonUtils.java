@@ -10,10 +10,6 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.TextView;
 
-/**
- * Created by WeConnect on 27/01/17.
- */
-
 public final class CommonUtils {
 
 	private static final String TAG = "CommonUtils";
@@ -39,8 +35,7 @@ public final class CommonUtils {
 		Snackbar snackbar = Snackbar.make(view, message, Snackbar.LENGTH_SHORT);
 
 		View sbView = snackbar.getView();
-		TextView textView = (TextView) sbView
-				.findViewById(android.support.design.R.id.snackbar_text);
+		TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
 		textView.setTextColor(ContextCompat.getColor(context, R.color.white));
 		snackbar.show();
 

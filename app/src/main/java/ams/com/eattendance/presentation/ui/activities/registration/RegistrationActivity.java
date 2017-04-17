@@ -22,7 +22,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class RegistrationActivity extends AppCompatActivity implements ValidateLoginPresenter.View{
+public class RegistrationActivity extends AppCompatActivity implements ValidateLoginPresenter.View {
 
 	private static final String TAG = RegistrationActivity.class.getSimpleName();
 
@@ -57,8 +57,8 @@ public class RegistrationActivity extends AppCompatActivity implements ValidateL
 		textTermCondition = (TextView) findViewById(R.id.text_term_condition);
 		buttonNext = (Button) findViewById(R.id.button_next);
 		buttonRegisterCompany = (Button) findViewById(R.id.button_register_company);
-		editTextCompanyName = (EditText)  findViewById(R.id.edittext_company_name);
-		editTextPhoneNumber = (EditText)  findViewById(R.id.edittext_mobile_number);
+		editTextCompanyName = (EditText) findViewById(R.id.edittext_company_name);
+		editTextPhoneNumber = (EditText) findViewById(R.id.edittext_mobile_number);
 
 		validateLoginPresenter = new ValidateLoginPresenterImpl(ThreadExecutor.getInstance(), MainThreadImpl.getInstance(), this,
 				new WebServiceRepositoryImpl());

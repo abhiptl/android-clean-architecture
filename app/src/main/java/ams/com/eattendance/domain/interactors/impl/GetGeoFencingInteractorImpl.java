@@ -7,9 +7,6 @@ import ams.com.eattendance.domain.interactors.base.AbstractInteractor;
 import ams.com.eattendance.domain.model.Geofence;
 import ams.com.eattendance.domain.repository.DatabaseRepository;
 
-/**
- * Created by WeConnect on 4/10/2017.
- */
 public class GetGeoFencingInteractorImpl extends AbstractInteractor implements GetGeoFencingInteractor {
 
 	private long employeeId;
@@ -29,7 +26,7 @@ public class GetGeoFencingInteractorImpl extends AbstractInteractor implements G
 	public void run() {
 		final Geofence geofence = databaseRepository.getGeofence(employeeId);
 
-		if(geofence == null) {
+		if (geofence == null) {
 			mainThread.post(new Runnable() {
 
 				@Override

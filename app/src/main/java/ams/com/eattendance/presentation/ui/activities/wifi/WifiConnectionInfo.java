@@ -1,8 +1,5 @@
 package ams.com.eattendance.presentation.ui.activities.wifi;
 
-/**
- * Created by WeConnect on 4/3/2017.
- */
 public class WifiConnectionInfo {
 
 	private String ssid;
